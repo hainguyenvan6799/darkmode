@@ -33,7 +33,7 @@ jobs:
         id: release
 
       - name: Show folder
-        run: ls
+        run: cd archive && ls
 
       - name: Upload assets to release
         uses: actions/upload-release-asset@v1
