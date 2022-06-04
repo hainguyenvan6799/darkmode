@@ -36,14 +36,16 @@ jobs:
         id: release
 
       - name: Echo some thing
-        run: ls
+        run: | 
+          cd archive
+          ls
 
-      - name: Upload assets to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: archive/dark-mode-plugin-1.0.0.zip
-          asset_name: dark-mode-plugin.zip
-          asset_content_type: application/zip
+      # - name: Upload assets to release
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.release.outputs.upload_url }}
+      #     asset_path: archive/dark-mode-plugin-1.0.0.zip
+      #     asset_name: dark-mode-plugin.zip
+      #     asset_content_type: application/zip
