@@ -32,8 +32,8 @@ jobs:
         uses: hainguyenvan6799/automation-build-and-release@1.0.0
         id: release
 
-      - name: Show folder
-        run: sudo find / -name "dark-mode-plugin-1.0.0.zip"
+      - run: cd archive
+      - run: ls
 
       - name: Upload assets to release
         uses: actions/upload-release-asset@v1
