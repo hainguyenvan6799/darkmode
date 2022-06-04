@@ -33,7 +33,7 @@ jobs:
         id: release
 
       - name: Show folder
-        run: cd archive && ls
+        run: sudo find / -name "dark-mode-plugin-1.0.0.zip"
 
       - name: Upload assets to release
         uses: actions/upload-release-asset@v1
