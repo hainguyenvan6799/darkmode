@@ -7,9 +7,7 @@ on:
 
 jobs:
   build-and-package:
-    runs-on: self-hosted
-    env:
-      VERSION: 1.0.0
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name: Checkout [main]
@@ -23,7 +21,7 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: npm ci
+        run: npm i
 
       - name: Build
         run: npm run build-prod
@@ -35,17 +33,12 @@ jobs:
         uses: hainguyenvan6799/automation-build-and-release@1.0.0
         id: release
 
-      - name: Echo some thing
-        run: |
-          cd archive
-          ls
-
-      # - name: Upload assets to release
-      #   uses: actions/upload-release-asset@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     upload_url: ${{ steps.release.outputs.upload_url }}
-      #     asset_path: archive/dark-mode-plugin-1.0.0.zip
-      #     asset_name: dark-mode-plugin.zip
-      #     asset_content_type: application/zip
+      - name: Upload assets to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: ./archive/dark-mode-plugin-1.0.0.zip
+          asset_name: dark-mode-plugin.zip
+          asset_content_type: application/zip
