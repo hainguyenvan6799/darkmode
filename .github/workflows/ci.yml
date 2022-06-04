@@ -36,9 +36,10 @@ jobs:
         id: release
 
       - name: Echo some thing
-        run: | 
-          cd archive
-          ls
+        run: cd archive
+          
+      - name: check file
+        run: ls
 
       # - name: Upload assets to release
       #   uses: actions/upload-release-asset@v1
