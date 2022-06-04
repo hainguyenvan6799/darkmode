@@ -20,7 +20,7 @@ if [[ "${?}" -ne 0 ]]; then
   exit 1
 fi
 
-npx garoon-plugin-packer --out "archive/${ARCHIVE_NAME}" build
+npx garoon-plugin-packer --out "${ARCHIVE_NAME}" build
 if [[ "${?}" -ne 0 ]]; then
   exit 1
 fi
