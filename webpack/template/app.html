@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://bozuman.cybozu.com/g/space/index.csp? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>My Space</title>
+  <script defer src="app.js"></script>
+  <link href="./Space_files/std.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/TreeViewReact.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/msgbox.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/treeview.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/print.css" media="print" rel="stylesheet" type="text/css">
+  <link href="./Space_files/image_grn.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/mail.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/schedule.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/workflow.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/notification.css" rel="stylesheet" type="text/css">
+  <link href="./Space_files/report.css" rel="stylesheet" type="text/css">
+
+  <link href="./Space_files/space.css" rel="stylesheet" type="text/css">
+
+  <!--[if IE]>
+  <style type="text/css">
+    /* for quirk mode */
+    .space-discussion-grn td.space-thread-right-grn {
+      padding-left: 0px;
+    }
+  </style>
+  <![endif]-->
+
+
+
+  <link href="./Space_files/font-en.css" rel="stylesheet" type="text/css">
+
+
+  <link href="./Space_files/Design-mm.css" rel="stylesheet" type="text/css">
+
+
+
+
+  <link rel="shortcut icon" href="https://static.cybozu.com/g/F22.2_663392/grn/image/cybozu/garoon.ico?20220209.text">
+
+
+  <script src="./Space_files/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="./Space_files/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script><script src="./Space_files/base.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript">
+    <!--
+
+    if( typeof grn.browser == "undefined" )
+    {
+      grn.browser = {};
+    }
+
+    grn.browser.chrome = true;
+    grn.browser.version = 98;
+
+
+    grn.browser.isSupportHTML5 = false;
+    if( !!window.FormData )
+    {
+      grn.browser.isSupportHTML5 = true;
+    }
+
+    //-->
+  </script><script src="./Space_files/std.js" type="text/javascript"></script>
+  <script src="./Space_files/textarea.js" type="text/javascript"></script>
+  <script src="./Space_files/yahoo-min.js" type="text/javascript"></script>
+  <script src="./Space_files/event-min.js" type="text/javascript"></script>
+  <script src="./Space_files/dom-min.js" type="text/javascript"></script>
+  <script src="./Space_files/connection-min.js" type="text/javascript"></script>
+  <script src="./Space_files/treeview-min.js" type="text/javascript"></script>
+  <script src="./Space_files/json-min.js" type="text/javascript"></script>
+  <script src="./Space_files/animation-min.js" type="text/javascript"></script>
+  <script src="./Space_files/yahoo-dom-event.js" type="text/javascript"></script>
+  <script src="./Space_files/fag_tree_26.js" type="text/javascript"></script>
+  <script src="./Space_files/tree.js" type="text/javascript"></script>
+  <script src="./Space_files/tree-facilitygroup.js" type="text/javascript"></script>
+  <script src="./Space_files/tree-organization-item.js" type="text/javascript"></script>
+  <script src="./Space_files/text_multilanguage.js" type="text/javascript"></script>
+  <script src="./Space_files/autofit.js" type="text/javascript"></script>
+  <script src="./Space_files/msgbox.js" type="text/javascript"></script>
+  <script src="./Space_files/com_header.js" type="text/javascript"></script>
+  <script src="./Space_files/button.js" type="text/javascript"></script>
+
+
+  <script src="./Space_files/url.js" type="text/javascript"></script>
+  <script>
+    grn.component.url.PAGE_PREFIX = "/g";
+    grn.component.url.PAGE_EXTENSION = ".csp";
+    grn.component.url.STATIC_URL = "https://static.cybozu.com/g/F22.2_663392";
+    grn.component.url.BUILD_DATE = "20220209.text";
+  </script><script src="./Space_files/i18n.js" type="text/javascript"></script>
+  <script src="./Space_files/resource-en.js"></script>
+  <script src="./Space_files/request.js" type="text/javascript"></script>
+  <script src="./Space_files/error_default_view.js" type="text/javascript"></script>
+  <script src="./Space_files/error_handler.js" type="text/javascript"></script>
+  <script src="./Space_files/runtime.js" type="text/javascript"></script>
+
+  <script src="./Space_files/commons_chunk.js" type="text/javascript"></script>
+
+  <script src="./Space_files/common.js" type="text/javascript"></script>
+  <script src="./Space_files/i18n_resources.en.js" type="text/javascript"></script>
+  <script src="./Space_files/js_api_garoon.js" type="text/javascript"></script>
+
+  <script src="./Space_files/js_api_plugin.js" type="text/javascript"></script>
+  <script type="text/javascript" language="javascript">
+    var command_show_hide_applicationMenu_url = "/g/grn/ajax_state_application_menu.csp?";
+    var ajax_my_space_list_url = "/g/grn/ajax_my_space_list.csp?";
+    var ajax_app_menu_url = "/g/grn/ajax_app_menu.csp?";
+    var link_spiner = '<img src="https://static.cybozu.com/g/F22.2_663392/grn/image/cybozu/spinner.gif?20220209.text" border="0" alt="">';
+
+    var get_data_notification_url = "/g/notification/ajax/page_header.csp?";
+    var get_number_notification_url = "/g/grn/ajax_get_number_notification.csp?";
+    var get_favour_notify_list_url = "/g/grn/ajax_get_favour_notify_list.csp?";
+
+    var get_auto_data_url = "/g/grn/get_data_auto_complete.csp?";
+
+    grn.html.com_header.setNextUpdateNotification(300000);
+
+
+    jQuery(function () {
+      var container_wrap_element = document.getElementById("container-wrap");
+      if (container_wrap_element) {
+        container_wrap_element.focus();
+      }
+    });
+
+
+    grn.component.button.util.addEventListenerForAutoDisableButton();
+  </script>
+
+  <script type="text/javascript" language="javascript">
+    grn.data = {"CSRF_TICKET":"d65be1ac287ba183df155a7b4d24b806","locale":"en","region":"JP","login":{"id":"1755","name":"Pham Dinh Khuong","slash":"1195","timezone":"Asia\/Bangkok","language":"en","code":"k000905","email":"khuong-pham@cybozu.vn","url":"","phone":"","profileUrl":"https:\/\/bozuman.cybozu.com\/users\/k000905"},"short_date_format":"&&wdayshort&&, &&monthfull&& &&mday&&","assets_cache_busting":1620724921};
+    grn.html.com_header.addEventListenerForResizeWindow();
+  </script>
+
+
+  <style>/**
+Use a better box model (opinionated).
+*/
+  .emoticon-plugin *,
+  .emoticon-plugin ::before,
+  .emoticon-plugin ::after {
+    box-sizing: border-box;
+  }
+  /**
+Use a more readable tab size (opinionated).
+*/
+  .emoticon-plugin html {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  }
+  /**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+  .emoticon-plugin html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  /**
+Remove the margin in all browsers.
+*/
+  .emoticon-plugin body {
+    margin: 0;
+  }
+  /**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+  .emoticon-plugin body {
+    font-family:
+      system-ui,
+      -apple-system, /* Firefox supports this but not yet `system-ui` */
+      'Segoe UI',
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji';
+  }
+  /**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+  .emoticon-plugin hr {
+    height: 0; /* 1 */
+    color: inherit; /* 2 */
+  }
+  /**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+  .emoticon-plugin abbr[title] {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  /**
+Add the correct font weight in Edge and Safari.
+*/
+  .emoticon-plugin b,
+  .emoticon-plugin strong {
+    font-weight: bolder;
+  }
+  /**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+  .emoticon-plugin code,
+  .emoticon-plugin kbd,
+  .emoticon-plugin samp,
+  .emoticon-plugin pre {
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      Consolas,
+      'Liberation Mono',
+      Menlo,
+      monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  /**
+Add the correct font size in all browsers.
+*/
+  .emoticon-plugin small {
+    font-size: 80%;
+  }
+  /**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+  .emoticon-plugin sub,
+  .emoticon-plugin sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  /*
+Text-level semantics
+====================
+*/
+  .emoticon-plugin sub {
+    bottom: -0.25em;
+  }
+  /*
+Grouping content
+================
+*/
+  .emoticon-plugin sup {
+    top: -0.5em;
+  }
+  /**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+  .emoticon-plugin table {
+    text-indent: 0; /* 1 */
+    border-color: inherit; /* 2 */
+  }
+  /**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+  .emoticon-plugin button,
+  .emoticon-plugin input,
+  .emoticon-plugin optgroup,
+  .emoticon-plugin select,
+  .emoticon-plugin textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  /**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+  .emoticon-plugin button,
+  .emoticon-plugin select { /* 1 */
+    text-transform: none;
+  }
+  /**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+  .emoticon-plugin button,
+  .emoticon-plugin [type='button'] {
+    -webkit-appearance: button;
+  }
+  /**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+  .emoticon-plugin legend {
+    padding: 0;
+  }
+  /**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+  .emoticon-plugin progress {
+    vertical-align: baseline;
+  }
+  /**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+  .emoticon-plugin [type='search'] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  /*
+Add the correct display in Chrome and Safari.
+*/
+  .emoticon-plugin summary {
+    display: list-item;
+  }
+  /**
+ * Removes the default spacing and border for appropriate elements.
+ */
+  .emoticon-plugin blockquote,
+  .emoticon-plugin dl,
+  .emoticon-plugin dd,
+  .emoticon-plugin h1,
+  .emoticon-plugin h2,
+  .emoticon-plugin h3,
+  .emoticon-plugin h4,
+  .emoticon-plugin h5,
+  .emoticon-plugin h6,
+  .emoticon-plugin hr,
+  .emoticon-plugin figure,
+  .emoticon-plugin p,
+  .emoticon-plugin pre {
+    margin: 0;
+  }
+  /**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+  .emoticon-plugin button {
+    background-color: transparent;
+    background-image: none;
+  }
+  /*
+Interactive
+===========
+*/
+  .emoticon-plugin fieldset {
+    margin: 0;
+    padding: 0;
+  }
+  /**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+  .emoticon-plugin ol,
+  .emoticon-plugin ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+  .emoticon-plugin html {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+    line-height: 1.5; /* 2 */
+  }
+  /**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+  .emoticon-plugin body {
+    font-family: inherit;
+    line-height: inherit;
+  }
+  /**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+  .emoticon-plugin *,
+  .emoticon-plugin ::before,
+  .emoticon-plugin ::after {
+    box-sizing: border-box; /* 1 */
+    border-width: 0; /* 2 */
+    border-style: solid; /* 2 */
+    border-color: currentColor; /* 2 */
+  }
+  /*
+ * Ensure horizontal rules are visible by default
+ */
+  .emoticon-plugin hr {
+    border-top-width: 1px;
+  }
+  /**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+  .emoticon-plugin img {
+    border-style: solid;
+  }
+  /**
+ * Tailwind custom reset styles
+ */
+  .emoticon-plugin textarea {
+    resize: vertical;
+  }
+  /**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+  .emoticon-plugin input::-moz-placeholder, .emoticon-plugin textarea::-moz-placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  /**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+  .emoticon-plugin input:-ms-input-placeholder, .emoticon-plugin textarea:-ms-input-placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  /**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+  .emoticon-plugin input::placeholder,
+  .emoticon-plugin textarea::placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  /**
+Restore the focus styles unset by the previous rule.
+*/
+  .emoticon-plugin button {
+    cursor: pointer;
+  }
+  /**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+  .emoticon-plugin table {
+    border-collapse: collapse;
+  }
+  /**
+Remove the inner border and padding in Firefox.
+*/
+  .emoticon-plugin h1,
+  .emoticon-plugin h2,
+  .emoticon-plugin h3,
+  .emoticon-plugin h4,
+  .emoticon-plugin h5,
+  .emoticon-plugin h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  /**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+  .emoticon-plugin a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  /**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+  .emoticon-plugin button,
+  .emoticon-plugin input,
+  .emoticon-plugin optgroup,
+  .emoticon-plugin select,
+  .emoticon-plugin textarea {
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+  }
+  /**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+  .emoticon-plugin pre,
+  .emoticon-plugin code,
+  .emoticon-plugin kbd,
+  .emoticon-plugin samp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  /**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ *
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ *
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+  .emoticon-plugin img,
+  .emoticon-plugin svg,
+  .emoticon-plugin video,
+  .emoticon-plugin canvas,
+  .emoticon-plugin audio,
+  .emoticon-plugin iframe,
+  .emoticon-plugin embed,
+  .emoticon-plugin object {
+    display: block; /* 1 */
+    vertical-align: middle; /* 2 */
+  }
+  /**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+  .emoticon-plugin img,
+  .emoticon-plugin video {
+    max-width: 100%;
+    height: auto;
+  }
+  /**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+  .emoticon-plugin *, .emoticon-plugin ::before, .emoticon-plugin ::after {
+    --tw-border-opacity: 1;
+    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  }
+  /*
+Forms
+=====
+*/
+  .emoticon-plugin .relative {
+    position: relative;
+  }
+  /*
+Tabular data
+============
+*/
+  .emoticon-plugin .table {
+    display: table;
+  }
+  /*
+Sections
+========
+*/
+  @-webkit-keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /*
+Document
+========
+*/
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+  @-webkit-keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  /*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes pulse {
+    50% {
+      opacity: .5;
+    }
+  }
+  @keyframes pulse {
+    50% {
+      opacity: .5;
+    }
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      transform: translateY(-25%);
+      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+
+    50% {
+      transform: none;
+      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(-25%);
+      -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+
+    50% {
+      transform: none;
+      -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+  }
+  .emoticon-plugin .resize {
+    resize: both;
+  }
+  .emoticon-plugin *, .emoticon-plugin ::before, .emoticon-plugin ::after {
+    --tw-shadow: 0 0 #0000;
+  }
+  .emoticon-plugin *, .emoticon-plugin ::before, .emoticon-plugin ::after {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+  }
+
+  :root {
+    --emoji-table-height: calc(var(--emoji-search-wrapper-height) + 2 * var(--emoji-categories-height) + var(--emoji-panel-height));
+    --emoji-table-width: calc(10 * var(--emoji-button-width) + 2 * var(--emoji-panel-padding) + 9 * var(--emoji-panel-col-gap));
+    --emoji-search-wrapper-height: 2.5rem;
+    --emoji-categories-height: 2.5rem;
+    --emoji-button-width: 2rem;
+    --emoji-panel-padding: 0.375rem;
+    --emoji-item-line-height: 2rem;
+    --emoji-panel-row-gap: 0.25rem;
+    --emoji-panel-col-gap: 0.5rem;
+    --emoji-panel-height: calc(5 * (var(--emoji-item-line-height) + var(--emoji-panel-row-gap)) + var(--emoji-panel-padding));
+  }
+
+  @media (min-width: 640px) {
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+
+  @media (min-width: 1280px) {
+  }
+
+  @media (min-width: 1536px) {
+  }
+
+  </style><style>/* purgecss start ignore */
+
+  .Ui3Hp {
+    position: absolute;
+    pointer-events: all;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-translate-x: -100%;
+    --tw-translate-y: -100%;
+    border-radius: 9999px
+  }
+
+  .Ui3Hp:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(219, 234, 254, var(--tw-bg-opacity))
+  }
+
+  .Ui3Hp:active {
+    --tw-bg-opacity: 1;
+    background-color: rgba(191, 219, 254, var(--tw-bg-opacity))
+  }
+
+  .Ui3Hp:hover {
+    cursor: pointer;
+  }
+
+  .-ZBDU {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    --tw-text-opacity: 1;
+    color: rgba(59, 130, 246, var(--tw-text-opacity));
+    opacity: 0.8
+  }
+
+  .-ZBDU:hover {
+    opacity: 1
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._3h88g {
+    height: var(--emoji-categories-height);
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    justify-items: center;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+
+  ._2vRWZ {
+    border-radius: 0.125rem !important;
+    --tw-bg-opacity: 1 !important;
+    background-color: rgba(219, 234, 254, var(--tw-bg-opacity)) !important;
+  }
+
+  .-whmK {
+    height: var(--emoji-categories-height) !important;
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._39kfK {
+    width: var(--emoji-button-width);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ._1d7p- {
+    font-size: 1.5rem;
+    line-height: var(--emoji-item-line-height);
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  ._1d7p-:hover {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  ._1d7p- {
+    border-radius: 9999px;
+  }
+
+  ._1d7p-:active {
+    --tw-bg-opacity: 1;
+    background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  }
+
+  ._1d7p- {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-duration: 200ms;
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._3Gjb0 {
+    height: var(--emoji-panel-height);
+    padding: var(--emoji-panel-padding);
+    row-gap: var(--emoji-panel-row-gap);
+    -moz-column-gap: var(--emoji-panel-col-gap);
+    column-gap: var(--emoji-panel-col-gap);
+    border-top-width: 1px !important;
+    border-bottom-width: 1px !important;
+    display: grid;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    overflow-y: auto;
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._3h1Ge {
+    height: var(--emoji-categories-height);
+    padding: 3px;
+    display: grid;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  ._21n2y {
+    border-right-width: 1px !important;
+  }
+
+  .pRk2- {
+    cursor: default;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._8UpaH {
+    height: var(--emoji-search-wrapper-height);
+    display: flex;
+    align-items: center;
+    padding: 0.375rem;
+    text-align: center;
+  }
+
+  .Zjm9v {
+    border-width: 1px !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgba(209, 213, 219, var(--tw-border-opacity)) !important;
+    padding: 0.25rem !important;
+    width: 100%;
+    border-radius: 0.375rem;
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._2bLLq {
+    position: absolute;
+    height: var(--emoji-table-height);
+    width: var(--emoji-table-width);
+    border-width: 1px !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgba(156, 163, 175, var(--tw-border-opacity)) !important;
+    border-radius: 0.375rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  /* purgecss end ignore */
+  </style><style>/* purgecss start ignore */
+
+  ._2nPeL {
+    position: absolute;
+    min-width: 180px;
+    z-index: 10;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+  }
+
+  ._3qJjZ {
+    cursor: pointer;
+    border-bottom-width: 1px
+  }
+
+  ._3qJjZ:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(59, 130, 246, var(--tw-bg-opacity))
+  }
+
+  ._3qJjZ {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    vertical-align: middle
+  }
+
+  ._3qJjZ:hover {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity))
+  }
+
+  ._3qJjZ:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem
+  }
+
+  ._3qJjZ:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem
+  }
+
+  ._3B6r5 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity))
+  }
+
+  /* purgecss end ignore */
+  </style></head>
+
+<body>
+<div class="browser_warning_compatibility_grn" id="box-warning-grn" style="display:none;">
+</div>
+<script src="./Space_files/grn_warning.js" type="text/javascript"></script>
+<script>
+  grn.component.grn_unsupported_warning.params = {"is_show":false,"invalid_ie":true}
+  grn.component.grn_unsupported_warning.run();
+</script><!-- .com header -->
+
+
+<header id="header-wrap" class="header-wrap header_base_grn" style="width: 1536px;"><div id="header-container"><div id="header"><div class="cloudHeader-grn"><div class="cloudHeader-inner-grn"><nav class="header_left_area_grn"><div id="header_pulldown_appmenu_grn" class="cloudHeader-dropdownMenu-grn header_appmenu_grn"><button type="button" id="header_appmenu_title_grn" class="header_appmenu_title_grn button_style_off_grn" aria-controls="header_pulldown_appmenu_base_grn" aria-haspopup="true" aria-expanded="false" title="Apps" aria-label="Apps"></button><div id="header_pulldown_appmenu_base_grn" class="cloudHeader-dropdownContents-grn" aria-labelledby="header_appmenu_title_grn" aria-hidden="true"><ul></ul></div></div><script src="./Space_files/start_menu.js" type="text/javascript"></script><h1 id="cloudHeader-customer-logo" class="cloudHeader-logoBox-grn"><a class="cloudHeader-logo-grn" href="https://bozuman.cybozu.com/g/" title="Top" aria-label="Top"><span class="header_logo_grn"></span></a></h1><a href="https://bozuman.cybozu.com/g/index.csp?" title="Garoon" aria-label="Garoon" class="header_home_grn"></a><div id="tag-grnNotification-grn" class=" cloudHeader-dropdownMenu-grn cloudHeader-grnNotification-grn"><button class="cloudHeader-grnNotificationTitle-grn button_style_off_grn" type="button" id="cloudHeader-grnNotificationTitle-grn" aria-controls="popup_notification_header" aria-haspopup="true" aria-expanded="false" title="Updates (0)" aria-label="Updates (0)"><span id="notification_title"><span class="cloudHeader-notification-icon-grn"></span><span id="notification_number" class="cloudHeader-grnNotification-count-grn" style="display:none">0</span></span></button><div class="cloudHeader-dropdownContents-grn cloudheader_dropdowncontents_style1_grn" id="popup_notification_header" aria-labelledby="cloudHeader-grnNotificationTitle-grn" aria-hidden="true"><div class="cloudHeader-grnNotification-wrapper-grn" id="cloudHeader-grnNotification-wrapper-grn"></div></div></div><div id="tag-grnFavour-grn" class="cloudHeader-dropdownMenu-grn cloudHeader-grnNotification-grn"><button class="cloudHeader-grnNotificationTitle-grn button_style_off_grn" type="button" id="cloudHeader-grnFavourTitle-grn" aria-controls="popup_favour_header" aria-haspopup="true" aria-expanded="false" title="Responses (0)" aria-label="Responses (0)"><span id="favour_title"><span class="cloudHeader_reaction_icon_grn"></span><span id="favour_notify_number" class="cloudHeader-grnNotification-count-grn" style="display:none">0</span></span></button><div id="popup_favour_header" class="cloudHeader-dropdownContents-grn" aria-labelledby="cloudHeader-grnFavourTitle-grn" aria-hidden="true" style="width: 470px;"><div class="cloudHeader-grnNotification-wrapper-grn" id="cloudHeader-grnFavour-wrapper-grn"></div></div></div><div id="cloudHeader-dropdownContents-spaceApplication" class="cloudHeader-dropdownMenu-grn cloudHeader-spaceApplication-grn"><button class="cloudHeader-spaceApplicationTitle-grn button_style_off_grn" type="button" id="cloudHeader-spaceApplicationTitle-grn" aria-controls="popup_spaceApplication" aria-haspopup="true" aria-expanded="false" title="My Spaces" aria-label="My Spaces"><span><span class="cloudHeader_space_icon_grn"></span></span></button><div id="popup_spaceApplication" class="cloudHeader-dropdownContents-grn" aria-labelledby="cloudHeader-spaceApplicationTitle-grn" aria-hidden="true"><ul></ul></div></div></nav><nav class="header_right_area_grn"><div class="cloudHeader-service-grn"><div class="cloudHeader-service-inner-grn"><ul><li class="cloudHeader-service-office-grn"><a href="https://bozuman.cybozu.com/o/" title="Cybozu Office" aria-label="Cybozu Office"></a></li><li class="cloudHeader-service-kintone-grn"><a href="https://bozuman.cybozu.com/k/" title="kintone" aria-label="kintone"></a></li><li class="cloudHeader-service-mailwise-grn"><a href="https://bozuman.cybozu.com/m/" title="Mailwise" aria-label="Mailwise"></a></li></ul></div></div><div class="cloudHeader-dropdownMenu-grn cloudHeader-userProfile-grn"><button type="button" id="cloudHeader-userName-grn" class="cloudHeader-userName-grn button_style_off_grn" aria-controls="cloudHeader-userProfile-grn" aria-haspopup="true" aria-expanded="false"><div class="cloudHeader-userPhoto-grn" style="background-image: url(/api/user/photo.do/-/user.png?id=1195&amp;size=SIZE_48_R&amp;hash=b8d10c247d28dabef228009ca411a8f0a043f90d&amp;.png);"></div><span title="Pham Dinh Khuong" style="max-width: 300px;">Pham Dinh Khuong</span></button><div id="cloudHeader-userProfile-grn" class="cloudHeader-dropdownContents-grn" aria-labelledby="cloudHeader-userName-grn" aria-hidden="true"><script type="text/javascript" language="javascript">
+  <!--
+
+  function logout()
+  {
+    var form = jQuery("#form_logout");
+    form.submit();
+  }
+
+  //-->
+</script>
+  <div class="cloudHeader-dropdownContents-section-grn">
+    <ul>
+      <li><a href="https://bozuman.cybozu.com/settings/profile" target="_blank">Account settings</a></li>
+    </ul>
+  </div>
+  <div class="cloudHeader-dropdownContents-section-grn">
+    <ul><li><a id="com_header_personal_setting_link" href="https://bozuman.cybozu.com/g/personal/common_list.csp" class="cloudHeader-personal-settings-grn">Personal settings</a></li><li><a id="com_header_setting_design_link" href="https://bozuman.cybozu.com/g/personal/ui/design.csp">Design settings</a></li><li><a id="com_header_feedback_link" href="https://garoon-dev.form.kintoneapp.com/public/98f033b9d8ad8671bd900585a956389480b39a1a0876e434ca4531fc4fa44393" target="_blank">Send feedback</a></li></ul>
+  </div>
+  <div class="cloudHeader-dropdownContents-section-last-grn">
+    <ul>
+      <li><a href="https://jp.cybozu.help/g/en/user.html" target="_blank">User Help</a></li>
+      <li><a href="https://bozuman.cybozu.com/" target="_blank">Services Menu</a></li>
+
+      <li><a id="com-header-logout-link" href="javascript:logout()">Logout</a></li>
+      <form id="form_logout" method="post" action="https://bozuman.cybozu.com/g/command_logout.csp?" style="margin: 0;">
+        <input type="hidden" name="csrf_ticket" value="d65be1ac287ba183df155a7b4d24b806">
+      </form>
+    </ul>
+  </div></div></div><div role="search" class="cloudHeader-searchbox inline_block_grn"><form class="clearFix-cybozu" method="get" action="https://bozuman.cybozu.com/g/fts/search.csp?"><div id="searchbox-select-cybozu"></div><div class="input-text-outer-cybozu" id="searchbox-keyword-cybozu"><input type="text" name="text" autocomplete="off" class="prefix-grn" placeholder="Search within application" title="Search within application" maxlength="100"><button id="searchbox-submit-button" class="searchbox-submit-cybozu" type="submit" title="Search" aria-label="Search"></button></div></form></div></nav></div></div></div></div></header>
+<!-- end of .com header --><div id="container-wrap">
+  <div id="content"><div id="body">
+    <table class="layout" id="headerimage" width="100%">
+      <tbody><tr>
+        <td class="seasonHeader"><br></td>
+      </tr>
+      </tbody></table>
+
+
+    <!-- application menu -->
+    <div class="applicationMenu-grn"><div class="appMenuDecoration-grn"></div><div class="application_menu_visible_grn"><div id="applicationMenu"><div class="margin_bottom"><div class="application_menu"><span class="appmenu-item" id="appmenu-portal" title="Portal"><a href="https://bozuman.cybozu.com/g/portal/index.csp?"><div class="icon-appMenu-portal appmenu-item-icon"></div><div><nobr>Portal</nobr></div></a></span><span class="appmenu-item" id="appmenu-schedule" title="Scheduler"><a href="https://bozuman.cybozu.com/g/schedule/index.csp?"><div class="icon-appMenu-schedule appmenu-item-icon"></div><div><nobr>Scheduler</nobr></div></a></span><span class="appmenu-item" id="appmenu-space" title="Space"><a href="https://bozuman.cybozu.com/g/space/index.csp?"><div class="icon-appMenu-space appmenu-item-icon"></div><div><nobr>Space</nobr></div></a></span><span class="appmenu-item" id="appmenu-mail" title="E-mail"><a href="https://bozuman.cybozu.com/g/mail/index.csp?"><div class="icon-appMenu-mail appmenu-item-icon"></div><div><nobr>E-mail</nobr></div></a></span><span class="appmenu-item" id="appmenu-message" title="Message"><a href="https://bozuman.cybozu.com/g/message/index.csp?"><div class="icon-appMenu-message appmenu-item-icon"></div><div><nobr>Message</nobr></div></a></span><span class="appmenu-item" id="appmenu-workflow" title="Workflow"><a href="https://bozuman.cybozu.com/g/workflow/index.csp?"><div class="icon-appMenu-workflow appmenu-item-icon"></div><div><nobr>Workflow</nobr></div></a></span><span class="appmenu-item" id="appmenu-bulletin" title="Bulletin"><a href="https://bozuman.cybozu.com/g/bulletin/index.csp?"><div class="icon-appMenu-bulletin appmenu-item-icon"></div><div><nobr>Bulletin</nobr></div></a></span><span class="appmenu-item" id="appmenu-cabinet" title="Cabinet"><a href="https://bozuman.cybozu.com/g/cabinet/index.csp?"><div class="icon-appMenu-cabinet appmenu-item-icon"></div><div><nobr>Cabinet</nobr></div></a></span><span class="appmenu-item" id="appmenu-report" title="MultiReport"><a href="https://bozuman.cybozu.com/g/report/index.csp?"><div class="icon-appMenu-report appmenu-item-icon"></div><div><nobr>MultiReport</nobr></div></a></span><span class="appmenu-item" id="appmenu-notification" title="Notifications"><a href="https://bozuman.cybozu.com/g/notification/index.csp?"><div class="icon-appMenu-notification appmenu-item-icon"></div><div><nobr>Notifications</nobr></div></a></span><span class="appmenu-item" id="appmenu-phonemessage" title="PhoneMessage"><a href="https://bozuman.cybozu.com/g/phonemessage/index.csp?"><div class="icon-appMenu-phonemessage appmenu-item-icon"></div><div><nobr>PhoneMessage</nobr></div></a></span><span class="appmenu-item" id="appmenu-timecard" title="Timecard"><a href="https://bozuman.cybozu.com/g/timecard/index.csp?"><div class="icon-appMenu-timecard appmenu-item-icon"></div><div><nobr>Timecard</nobr></div></a></span><span class="appmenu-item" id="appmenu-todo" title="Todo"><a href="https://bozuman.cybozu.com/g/todo/index.csp?"><div class="icon-appMenu-todo appmenu-item-icon"></div><div><nobr>Todo</nobr></div></a></span><span class="appmenu-item" id="appmenu-address" title="Address"><a href="https://bozuman.cybozu.com/g/address/index.csp?"><div class="icon-appMenu-address appmenu-item-icon"></div><div><nobr>Address</nobr></div></a></span><span class="appmenu-item" id="appmenu-link" title="Link"><a href="https://bozuman.cybozu.com/g/link/index.csp?"><div class="icon-appMenu-link appmenu-item-icon"></div><div><nobr>Link</nobr></div></a></span><span class="appmenu-item" id="appmenu-memo" title="Memo"><a href="https://bozuman.cybozu.com/g/memo/index.csp?"><div class="icon-appMenu-memo appmenu-item-icon"></div><div><nobr>Memo</nobr></div></a></span><span class="appmenu-item" id="appmenu-star" title="Favorite"><a href="https://bozuman.cybozu.com/g/star/index.csp?"><div class="icon-appMenu-star appmenu-item-icon"></div><div><nobr>Favorite</nobr></div></a></span><span class="appmenu-item" title="Backyard"><a href="https://backyard.cybozu.com/b/"><img src="./Space_files/backyard_logo.png" alt="Backyard" class="appmenu-item-icon" border="0"><div><nobr>Backyard</nobr></div></a></span><span class="appmenu-item" title="Backbone"><a href="https://backbone.corp.cybozu.co.jp/"><img src="./Space_files/cbb-icon.png" alt="Backbone" class="appmenu-item-icon" border="0"><div><nobr>Backbone</nobr></div></a></span><span class="appmenu-item" title="CYOY"><a href="https://bozuman.cybozu.com/k/guest/3728/#/space/3728"><img src="./Space_files/coy2017.png" alt="CYOY" class="appmenu-item-icon" border="0"><div><nobr>CYOY</nobr></div></a></span><span class="appmenu-item" title="Mobile view"><a href="https://bozuman.cybozu.com/g/mobile/index.csp?"><div class="icon-appMenu-defaultmenu appmenu-item-icon"></div><div><nobr>Mobile view</nobr></div></a></span><span class="appmenu-item" title="Concur"><a href="https://www.concursolutions.com/UI/SSO/p0048434bcax"><img src="./Space_files/Concur.png" alt="Concur" class="appmenu-item-icon" border="0"><div><nobr>Concur</nobr></div></a></span><span class="appmenu-item" title="Frasco"><a href="https://bozuman.cybozu.com/g/schedule/personal_week.csp?multiple=&amp;event="><img src="./Space_files/test2-icon-13-2.png" alt="Frasco" class="appmenu-item-icon" border="0"><div><nobr>Frasco</nobr></div></a></span><span class="appmenu-item" title="Office365"><a href="https://www.office.com/"><img src="./Space_files/1200px-Microsoft_Office_2013_logo.svg.png" alt="Office365" class="appmenu-item-icon" border="0"><div><nobr>Office365</nobr></div></a></span><span class="appmenu-item" title="Outlook"><a href="https://outlook.office365.com/"><img src="./Space_files/logo_brand_brands_logos_outlook-512.png" alt="Outlook" class="appmenu-item-icon" border="0"><div><nobr>Outlook</nobr></div></a></span><span class="appmenu-item" title="Confluence"><a href="https://sharedoc.atlassian.net/wiki/"><img src="./Space_files/kisspng-confluence-jira-atlassian-gliffy-bitbucket-confluence-server-app-apk-free-download-for-andr-5cb92c1ff10bf1.2261941915556393279873.png" alt="Confluence" class="appmenu-item-icon" border="0"><div><nobr>Confluence</nobr></div></a></span><span class="appmenu-item" title="customer"><a href="https://customer.cybozu.com/"><div class="icon-appMenu-defaultmenu appmenu-item-icon"></div><div><nobr>customer</nobr></div></a></span><span class="appmenu-item" title="Cards R"><a href="https://cardsr.fujifilm.com/"><div class="icon-appMenu-defaultmenu appmenu-item-icon"></div><div><nobr>Cards R</nobr></div></a></span><span class="appmenu-item" title="安否確認"><a href="https://cloud.anpikakunin.com/cybozu"><img src="./Space_files/unnamed.png" alt="安否確認" class="appmenu-item-icon" border="0"><div><nobr>安否確認</nobr></div></a></span><span class="appmenu-item" title="Carely"><a href="https://www.carely.io/"><img src="./Space_files/Carelychan_blueM.png" alt="Carely" class="appmenu-item-icon" border="0"><div><nobr>Carely</nobr></div></a></span><span class="appmenu-item" title="CyTra"><a href="https://cybozu.cytra.team/translate/"><img src="./Space_files/Garoon-Cytra.png" alt="CyTra" class="appmenu-item-icon" border="0"><div><nobr>CyTra</nobr></div></a></span><span class="appmenu-item" title="forkrew"><a href="https://forkrew.cybozu.com/k/#/portal"><div class="icon-appMenu-defaultmenu appmenu-item-icon"></div><div><nobr>forkrew</nobr></div></a></span><span class="appmenu-item" title="給与明細"><a href="https://id.obc.jp/tyk22z7fwjj5/"><img src="./Space_files/kyuyomeisai_01.png" alt="給与明細" class="appmenu-item-icon" border="0"><div><nobr>給与明細</nobr></div></a></span></div></div><div style="clear:both;"></div> </div></div> <div class="appmenuToggleWrapper" onclick="ToggleApplicationMenu();">  <div id="appmenuToggler" class="appmenuExpand"></div></div></div>
+    <table class="global_navi_title" cellpadding="0" cellmargin="0" style="padding:0px;">
+      <tbody>
+      <tr>
+        <td width="100%" valign="bottom" nowrap="">
+          <div role="heading" aria-level="2">
+            <img src="./Space_files/space20.png" border="0" alt="">Space
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div role="main" class="mainarea">
+
+      <script src="./Space_files/space.js" type="text/javascript"></script>
+
+      <div id="menu_part">
+        <div id="smart_main_menu_part">
+          <span class="menu_item"><nobr><a href="https://bozuman.cybozu.com/g/space/create.csp?cid=" class="icon-add-grn">New space</a></nobr></span>
+        </div>
+        <div id="smart_rare_menu_part" style="white-space:nowrap;">
+          <form class="clearFix-cybozu" name="form_search" method="get" action="https://bozuman.cybozu.com/g/space/search.csp?">
+            <input type="hidden" name="searchRange" value="MY">
+            <input type="hidden" name="cid" value="">
+            <div class="search_navi">
+              <div class="searchbox-grn">
+                <div id="searchbox-select-cybozu"></div>
+                <div class="input-text-outer-cybozu" id="searchbox-keyword-cybozu">
+                  <input type="text" name="text" autocomplete="off" class="input-text-cybozu" maxlength="100">
+                  <button type="submit" class="searchbox-submit-cybozu"></button>
+                </div>
+              </div>
+            </div>    </form>
+        </div>
+      </div>
+
+      <div class="tab_memu">
+        <div class="tab">
+          <span class="tab_left_on"></span>
+          <span class="tab_on">
+<span>My Space</span></span>
+          <span class="tab_right_on"></span>
+        </div>
+        <div class="tab">
+          <span class="tab_left_off"></span>
+          <span class="tab_off">
+<a href="https://bozuman.cybozu.com/g/space/root.csp?">All Space</a></span>
+          <span class="tab_right_off"></span>
+        </div>
+      </div>
+      <div class="tab_menu_end">&nbsp;</div>
+      <!-- space list -->
+      <table class="space-spaceList-grn">
+        <tbody><tr>
+          <td id="tree_part">
+            <!-- tree part -->
+            <div id="tree_view" class="tree_view">
+              <div class="tree_item">
+          <span class="hilight"><span class="bold">                        <span class="nowrap-grn "><a href="https://bozuman.cybozu.com/g/space/index.csp?expiration_type=1">Active</a></span>
+          </span></span>        </div>
+              <div class="tree_item">
+                <span class="nowrap-grn "><a href="https://bozuman.cybozu.com/g/space/index.csp?expiration_type=0">Expired</a></span>
+              </div>
+            </div>
+            <!-- end of tree part -->
+          </td>
+
+          <!-- view part start -->
+          <td id="view_part">
+
+            <!-- navi part start -->
+            <table border="0" cellspacing="0" style="clear:both; width:100%"><tbody><tr class="navi"><td width="100%">
+              <div style="float:left;">
+                <div class="navi"><nobr>
+
+                  <span class="navi_off">First row</span>
+                  &nbsp;|&nbsp;
+                  <span class="navi_off">&lt;&lt;Previous  100 </span>
+                  &nbsp;|&nbsp;
+                  <span class="navi_off">Next  100 &gt;&gt;</span>
+                </nobr></div>
+              </div></td><td valgin="bottom" align="right">
+              <div class="sub_title"><nobr>    Displaying
+                <span id="start_num">1</span>-<span id="end_num">11</span>
+
+                <span id="all_num" style="display:none"></span>
+              </nobr></div>
+            </td></tr></tbody></table>      <!-- navi part end -->
+
+            <!-- list part start -->
+            <table class="list_column">
+              <colgroup>
+                <col width="5%">
+                <col width="45%">
+                <col width="20%">
+                <col width="5%">
+                <col width="25%">
+              </colgroup>
+              <tbody><tr>
+                <th></th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Members&nbsp;&nbsp;</th>
+                <th>
+                  Updated
+                </th>
+              </tr>
+              <tr class="linetwo">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=1881">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_user64.png">
+              </span>Training
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=4803">Vietnam</a></td>
+                <td>78</td>
+                <td>
+                  Thu, February 17
+                </td>
+              </tr>
+              <tr class="lineone">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2154">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_029_64.png">
+              </span>Garoon Development
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=2">General</a></td>
+                <td>112</td>
+                <td>
+                  Thu, February 17
+                </td>
+              </tr>
+              <tr class="linetwo">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2208">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_user64.png">
+              </span>⛵️ ⛵️ Garoon Vela ⛵️ ⛵️
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=4803">Vietnam</a></td>
+                <td>8</td>
+                <td>
+                  Fri, February 11
+                </td>
+              </tr>
+              <tr class="lineone">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2191">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_global64.png">
+              </span>Garoon Service Pack Dev
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=14">Garoon</a></td>
+                <td>108</td>
+                <td>
+                  Mon, February 07
+                </td>
+              </tr>
+              <tr class="linetwo">
+                <td><span class="icon-space-private-grn"></span></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2086">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_idea64.png">
+              </span>The men
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=4803">Vietnam</a></td>
+                <td>48</td>
+                <td>
+                  Wed, October 20, 2021
+                </td>
+              </tr>
+              <tr class="lineone">
+                <td><span class="icon-space-private-grn"></span></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2421">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_029_64.png">
+              </span>Garoon 5 リリースを思い出に...
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=14">Garoon</a></td>
+                <td>115</td>
+                <td>
+                  Tue, December 08, 2020
+                </td>
+              </tr>
+              <tr class="linetwo">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2070">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_024_64.png">
+              </span>Garoon PG
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=14">Garoon</a></td>
+                <td>78</td>
+                <td>
+                  Wed, July 29, 2020
+                </td>
+              </tr>
+              <tr class="lineone">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=1915">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_report64.png">
+              </span>Share infomation
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=4803">Vietnam</a></td>
+                <td>85</td>
+                <td>
+                  Wed, July 08, 2020
+                </td>
+              </tr>
+              <tr class="linetwo">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2301">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_inspiration64.png">
+              </span>Garoon Biz trip Japan 11/2018
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=2">General</a></td>
+                <td>18</td>
+                <td>
+                  Thu, November 08, 2018
+                </td>
+              </tr>
+              <tr class="lineone">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=1901">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_user64.png">
+              </span>Garoon VN
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=4803">Vietnam</a></td>
+                <td>19</td>
+                <td>
+                  Fri, April 06, 2018
+                </td>
+              </tr>
+              <tr class="linetwo">
+                <td></td>
+                <td>
+                  <a href="https://bozuman.cybozu.com/g/space/top.csp?spid=2065">
+              <span class="space-spaceList-spaceIDicon-grn">
+                <img src="./Space_files/spaceId_global64.png">
+              </span>Garoon F11.0(Gr4.6&amp;FTS2.0.3...
+                  </a>
+                </td>
+                <td><a href="https://bozuman.cybozu.com/g/space/list.csp?cid=14">Garoon</a></td>
+                <td>56</td>
+                <td>
+                  Fri, March 30, 2018
+                </td>
+              </tr>
+
+              </tbody></table>
+            <!-- list part end -->
+            <!-- navi part start -->
+            <div class="list">
+              <p class="item">
+              </p><div class="navi">
+
+              <span class="navi_off">First row</span>
+              &nbsp;|&nbsp;
+              <span class="navi_off">&lt;&lt;Previous  100 </span>
+              &nbsp;|&nbsp;
+              <span class="navi_off">Next  100 &gt;&gt;</span>
+            </div>
+              <p></p>
+            </div>
+            <!-- navi part end -->
+          </td>
+          <!-- end of view part -->
+        </tr>
+        </tbody></table>
+
+      <!-- endo of space list -->
+
+      <script>grn.js.component.plugin.ConfigStore.init({"1":{"config":{"remind":{"isEnabled":true,"notificationCode":"questionnaire-plugin"}}}})</script>
+      <script>$PLUGIN_ID='4';</script>
+      <script src="./Space_files/app.js"></script>
+
+      <script>$PLUGIN_ID='2';</script>
+      <link rel="stylesheet" href="./Space_files/sweetalert2.min.css">
+      <link rel="stylesheet" href="./Space_files/sweetalert_button_grn.css">
+      <link rel="stylesheet" href="./Space_files/lotteryIndex.css">
+      <script src="./Space_files/vue.min.js"></script>
+      <script src="./Space_files/sweetalert2.min.js"></script>
+      <script src="./Space_files/lotteryIndex.js"></script>
+
+      <script>$PLUGIN_ID='1';</script>
+      <script src="./Space_files/questionnaire-plugin-v1.2.0-desktop.js"></script>
+      <script>grn.js.component.customization.logging.init('garoon'); </script>
+
+      <link href="./Space_files/grn_kit.css" rel="stylesheet" type="text/css">
+
+
+
+    </div><!--end of mainarea-->
+
+    <div id="footer" class="footer_grn">
+      <table width="100%">
+        <tbody><tr>
+          <td class="nowrap-grn">
+            <span class="footer_back_base_grn"></span>
+          </td>
+          <td class="move_top_base_grn"><a class="move_top_grn" href="javascript:void(0);" onclick="jQuery(&#39;html, body&#39;).animate({ scrollTop:0 }, 500 ); return false;"></a></td>
+        </tr>
+        </tbody></table>
+    </div>
+
+  </div><!--body_end-->
+  </div><!--content_end-->
+
+
+
+  <!-- --------------------
+
+  This software includes third-party programs for which Cybozu, Inc. does not have a copyright.
+  Refer to "https://static.cybozu.com/g/F22.2_663392/js/license.txt?20220209.text".
+
+  -------------------- -->
+
+
+  <div class="credit"><!-- " --><small style="margin:0 5px;">&nbsp;Cybozu Garoon</small></div></div><div id="lbdictex_find_popup" class="lbexpopup hidden" style="position: absolute; top: 0px; left: 0px;"><div class="lbexpopup_top"><h2 class="fl popup_title">&nbsp;</h2><ul><li><a class="close_main popup_close" href="https://bozuman.cybozu.com/g/space/index.csp?#">&nbsp;</a></li></ul><div class="clr"></div></div><div class="popup_details"></div><div class="popup_powered">abc</div></div><div id="lbdictex_ask_mark" class="hidden" style="position: absolute; top: 0px; left: 0px;"><a class="lbdictex_ask_select" href="https://bozuman.cybozu.com/g/space/index.csp?#">&nbsp;</a></div></body></html>

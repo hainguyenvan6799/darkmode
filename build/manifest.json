@@ -1,0 +1,31 @@
+{
+  "manifest_version": 1,
+  "version": "1.0.0",
+  "target_applications": [
+    "ALL"
+  ],
+  "impacted_applications": [
+    "ALL"
+  ],
+  "name": {
+    "en": "Dark mode plugin"
+  },
+  "description": {
+    "en": "Dark mode Plugin is a plugin that lets you switch to dark mode on Garoon."
+  },
+  "icon": "image/icon.png",
+  "desktop": {
+    "js": [
+      "js/app.js"
+    ]
+  },
+  "homepage_url": {
+    "en": "https://github.dev.cybozu.co.jp/garoon/dark-mode-plugin"
+  },
+  "config": {
+    "html": "html/config.html",
+    "js": [
+      "js/config.js"
+    ]
+  }
+}

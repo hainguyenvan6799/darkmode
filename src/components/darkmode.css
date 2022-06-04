@@ -1,0 +1,308 @@
+.darkmode {
+  background-color: #1c2128;
+}
+
+.darkmode .list_column .lineone,
+.darkmode .subWindowContent-grn .list_column_style2_grn .lineone {
+  background-color: #1c2128;
+  color: #c9d1d9;
+}
+
+.darkmode .list_column th {
+  background-color: #4b4a4a;
+  color: #c9d1d9;
+}
+
+.darkmode a,
+.darkmode a div,
+.darkmode #menu_part a,
+.darkmode .tab_off a,
+.darkmode #js_page_header_notification a.notify_img_grn,
+.darkmode .cloudHeader-grnNotification-userName-grn a {
+  color: #58a6ff;
+}
+
+.darkmode #select_tab_all_todo,
+.darkmode #select_tab_my_todo,
+.darkmode #right_list #select_tab_all_file,
+.darkmode #thread_add a,
+.darkmode .selected_item,
+.darkmode ul.holder li.bit-box:hover,
+.darkmode .js_dialog_title_area,
+.darkmode .js_tag_holder .js_tag_item,
+.darkmode .balloon_arrow_down_grn,
+.darkmode .list_message_balloon_grn,
+.darkmode #cloudHeader-adminSettings a:hover,
+.darkmode #popup_spaceApplication a:hover,
+.darkmode #popup_favour_header button:hover,
+.darkmode #header_pulldown_appmenu_base_grn .appmenu-item a:hover,
+.darkmode #cloudHeader-userProfile-grn a:hover,
+.darkmode .tab_off,
+.darkmode .hilight,
+.darkmode .button_group_item_select_grn.font_normal_grn,
+.darkmode .button_style_off_grn.font_normal_grn,
+.darkmode .button_style_off_grn.button_group_item_select_grn,
+.darkmode .tab_on,
+.darkmode .std_form th,
+.darkmode .view_table th,
+.darkmode #favourer_dialog,
+.darkmode #reply_dialog_header,
+.darkmode .js_suggest_list li a:hover,
+.darkmode button.js_button.button_group_item_grn.button_style_off_grn,
+.darkmode #todo_add_title,
+.darkmode .selectlist_grn li:hover,
+.darkmode #msgbox .title,
+.darkmode #CID_pulldown a:hover,
+.darkmode #showCategoryOverlay,
+.darkmode .space-createForm-iconSelected-grn,
+.darkmode .js_folder_setting_container th,
+.darkmode .button_disable_filter_grn .button_min_width1_grn,
+.darkmode #folder_tree tr,
+.darkmode #folder_tree .ygtvcontent a,
+.darkmode .list_menu button,
+.darkmode #move_folder_top a,
+.darkmode #move_folder_bottom a,
+.darkmode .js_dialog_content .navi_viewchange_right_grn:hover,
+.darkmode .js_dialog_content .navi_viewchange_left_grn:hover,
+.darkmode .space-app-addMenuBtn-grn a,
+.darkmode a.space-spaceListIconView-space-grn:hover,
+.darkmode .space-todoLeft-operation-grn .space-button-grn a,
+.darkmode .space-app-kintoneApp-newCreate-grn a,
+.darkmode #cloudHeader-userProfile-grn a:hover,
+.darkmode .space-app-kintoneApp-noApplication-grn,
+.darkmode .space-app-kintoneAppDetail-grn,
+.darkmode .space-app-kintoneAppInfo-date-grn,
+.darkmode .space-app-kintoneAppAction-grn,
+.darkmode .space-app-kintoneAppInfo-user-grn,
+.darkmode .msgbox .title,
+.darkmode .msgbox .command,
+.darkmode #name-label-lines input[type=button],
+.darkmode select[disabled],
+.darkmode select[disabled]:hover {
+  background-color: #21262d;
+  color: #c9d1d9;
+}
+
+.darkmode .space-addTodo-overlayBtn-grn,
+.darkmode .global_navi,
+.darkmode .space-threadRightList-body-grn .space-threadRightList-todo-grn,
+.darkmode #thread_operation,
+.darkmode #favourer_dialog_header .subWindowTitleLeft-grn,
+.darkmode #favourer_dialog_header .subWindowTitleRight-grn,
+.darkmode #dialog-content,
+.darkmode .std_form,
+.darkmode #dialog,
+.darkmode #popup_notification_header,
+.darkmode #cloudHeader-adminSettings,
+.darkmode #popup_spaceApplication,
+.darkmode #popup_favour_header,
+.darkmode #footer,
+.darkmode #header_pulldown_appmenu_base_grn,
+.darkmode #cloudHeader-userProfile-grn,
+.darkmode .application_menu_visible_grn,
+.darkmode .global_navi_title,
+.darkmode .mainarea,
+.darkmode input[type='text'],
+.darkmode textarea,
+.darkmode .view_table td,
+.darkmode #thread-urlTip-inner-grn,
+.darkmode .buttonSelectMove-grn a,
+.darkmode #follow_form_reply_comment .replyForm-body-grn,
+.darkmode .list_column .linetwo,
+.darkmode .subWindowContent-grn .list_column_style2_grn .linetwo,
+.darkmode #space-addTodo-overlayWindow-grn,
+.darkmode .input-text-cybozu,
+.darkmode #msgbox,
+.darkmode .selectlist_grn,
+.darkmode .pulldown_menu_grn,
+.darkmode #CID_pulldown a,
+.darkmode select,
+.darkmode .js_folder_setting_container td,
+.darkmode .maincontents_list_td,
+.darkmode .js_dialog_content .navi_viewchange_right_grn,
+.darkmode .js_dialog_content .navi_viewchange_left_grn,
+.darkmode .mainarea,
+.darkmode .space-app-addMenu-grn,
+.darkmode .space-todoLeft-operation-grn .space-button-grn a:hover,
+.darkmode .application_menu_hidden_grn,
+.darkmode .subWindowContent-grn .buttonArea-grn,
+.darkmode .msgbox,
+.darkmode #tree_view {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.darkmode .mainarea h2,
+.darkmode #FieldToShowErrorMessage + div,
+.darkmode #upload_table td,
+.darkmode .space-discussion-grn td,
+.darkmode .inline_block_grn,
+.darkmode #dialog-header,
+.darkmode .js_item_anchor .js_label,
+.darkmode .space-thread-attachedFile-grn nobr,
+.darkmode .switch_textformat_grn label,
+.darkmode .js_thread_comment_body,
+.darkmode #thread_star_list,
+.darkmode .list_message_balloon_grn .bold_grn,
+.darkmode #js_page_header_notification pre.format_contents,
+.darkmode #popup_spaceApplication a,
+.darkmode #popup_favour_header button span,
+.darkmode #popup_favour_header span,
+.darkmode #cloudHeader-adminSettings a,
+.darkmode #cloudHeader-userProfile-grn a {
+  color: #c9d1d9;
+}
+
+.darkmode .list_column .row_highlight {
+  background-color: #21262d !important;
+  color: #c9d1d9 !important;
+}
+
+.darkmode #id_pulldown_selection,
+.darkmode #id_pulldown_candidate {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+
+.darkmode .space-threadList-border-grn {
+  border-bottom-color: #21262d;
+  border-top-color: #21262d;
+}
+
+.darkmode .selectlist_grn li.selectlist_selected_grn:hover {
+  background-color: #0a72d0;
+}
+
+.darkmode #thread_comment_add_mention_button,
+.darkmode #thread_operation a:hover,
+.darkmode #dialog li a:hover,
+.darkmode .tree-select-current,
+.darkmode .space-threadList-read-grn:hover,
+.darkmode .header_appmenu_grn .appmenu-item a:hover,
+.darkmode #header_pulldown_appmenu_base_grn .appmenu-item a:hover nobr {
+  background-color: #21262d;
+  color: #58a6ff;
+}
+
+/** Add shared todo dialog */
+.darkmode .space-addTodo-overlayBtn-grn span:last-of-type a {
+  background-color: inherit;
+  color: #c9d1d9;
+}
+
+/** Start Like member list dialog **/
+.darkmode #favourer_list {
+  background-color: inherit;
+}
+
+.darkmode #favourer_list .favour-datetime-grn {
+  color: inherit;
+}
+
+.darkmode #favourer_dialog_header .subWindowTitleText-grn {
+  color: inherit;
+}
+
+.darkmode .js_tag_holder {
+  background-color: inherit;
+  color: inherit;
+}
+
+.darkmode #reply_comment_mention_list_incremental_search_input {
+  background-color: inherit;
+  color: inherit;
+}
+
+.darkmode #thread_comment_add_mention_list_incremental_search_input {
+  background-color: inherit;
+  color: #c9d1d9;
+}
+
+.darkmode #reply_comment_mention_button {
+  background-color: inherit;
+}
+
+.darkmode #PermanentLinkUrl {
+  background-color: inherit;
+  color: inherit;
+}
+
+.darkmode .js_message {
+  background-color: inherit;
+}
+
+.darkmode #popup_favour_header button {
+  background-color: inherit;
+}
+
+.darkmode span.cloudHeader-grnNotification-itemDate-grn {
+  background-color: inherit;
+  color: #c9d1d9;
+}
+
+.darkmode .cloudHeader-grnNotification-item-grn {
+  background-color: inherit;
+}
+
+.darkmode #balloonField .space-spaceBalloon-inner-grn {
+  background: inherit;
+  border-color: #c9d1d9;
+}
+
+.darkmode #right_list #select_tab_all_todo #all_todo {
+  background: inherit;
+}
+
+.darkmode .space-threadRightList-tabCurrent-grn {
+  background: inherit;
+  color: #c9d1d9;
+}
+
+.darkmode .space-threadRightList-tab-grn {
+  background: inherit;
+}
+
+.darkmode #right_list #select_tab_my_todo #my_todo {
+  background: inherit;
+}
+
+.darkmode #right_list #select_tab_all_file #all_file {
+  background: inherit;
+}
+
+.darkmode .js_suggest_list {
+  box-shadow: 0 2px 8px rgb(146 146 146 / 40%);
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+/** main button **/
+.darkmode .button1_main_grn a {
+  background-color: #21262d;
+  border-color: #21262d;
+  color: #c9d1d9;
+}
+
+/** normal button **/
+.darkmode .button1_normal_grn a,
+.darkmode .search-buttonMain-grn {
+  background-color: #0d1117;
+  border-color: #c9d1d9;
+  color: #c9d1d9;
+}
+
+.darkmode #categorySelect-OK a {
+  border-color: #c9d1d9;
+}
+
+/* follow button */
+.darkmode #follow_link {
+  border-color: #21262d;
+  background-color: #21262d;
+  color: #c9d1d9;
+}
+
+/** hover menu header **/
+.darkmode #applicationMenu .appmenu-item a:hover nobr {
+  color: #cc3300;
+}

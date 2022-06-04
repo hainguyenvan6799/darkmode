@@ -1,0 +1,16 @@
+.sa-confirm-button-container .confirm,
+.sa-button-container .cancel,
+button.swal2-styled,
+.swal2-actions .swal2-confirm,
+.swal2-actions .swal2-cancel,
+button.swal-button,
+.swal-button-container .swal-button--confirm,
+.swal-button-container .swal-button--cancel {
+  height: auto;
+  line-height: 1.2;
+}
+
+button.swal-button:hover {
+  border: 0;
+}
+
