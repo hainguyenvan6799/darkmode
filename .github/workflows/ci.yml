@@ -37,8 +37,6 @@ jobs:
 
       - name: Echo some thing
         run: cd archive
-          
-      - name: check file
         run: ls
 
       # - name: Upload assets to release
