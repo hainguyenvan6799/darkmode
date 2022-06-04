@@ -16,7 +16,7 @@
   "icon": "image/icon.png",
   "desktop": {
     "js": [
-      "app.js"
+      "js/app.js"
     ]
   },
   "homepage_url": {
@@ -25,7 +25,7 @@
   "config": {
     "html": "html/config.html",
     "js": [
-      "config.js"
+      "js/config.js"
     ]
   }
 }
