@@ -1,6 +1,6 @@
 {
   "name": "dark-mode-garoon-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dark mode plugin for Garoon",
   "author": "Cybozu Vietnam",
   "scripts": {
