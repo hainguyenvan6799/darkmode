@@ -16,11 +16,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
-        env:
-          CI: true
-        with:
-          node-version: 14.x
+      - name: Install git if missing # Containers used by nektos/act don't have git preinstalled
+        run: if ! which git &> /dev/null; then apt-get update && apt-get install -y git; fi; 
 
       - name: Install dependencies
         run: npm i
@@ -34,6 +31,9 @@ jobs:
       - name: Release
         uses: hainguyenvan6799/automation-build-and-release@1.0.0
         id: release
+
+      - name: Show folder
+        run: ls
 
       - name: Upload assets to release
         uses: actions/upload-release-asset@v1
